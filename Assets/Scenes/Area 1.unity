@@ -2560,19 +2560,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 308400212}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: OnInteractPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &683386005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,6 +2739,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1492061708}
   - {fileID: 1177183059}
   - {fileID: 1254852708}
   - {fileID: 308400211}
@@ -2869,6 +2858,120 @@ Transform:
   m_Children:
   - {fileID: 2131386722}
   - {fileID: 88671311}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &808640372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808640375}
+  - component: {fileID: 808640374}
+  - component: {fileID: 808640373}
+  m_Layer: 0
+  m_Name: ObjectiveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &808640373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df85c46e8a3c4ec449e7ce078b85503b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wakeUpLines:
+  - Ugh... my head hurts.
+  - The last thing I remember was a huge explosion... then a shockwave hit me.
+  - ...What happened?
+--- !u!114 &808640374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77e4011fad9eb745aa95670be72e950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _steps:
+  - id: LISTEN_TO_RADIO
+    title: Objective
+    description: Listen to radio
+    isComplete: 0
+  - id: GET_FOOD
+    title: Objective
+    description: Get Food
+    isComplete: 0
+  - id: EAT_FOOD
+    title: Objective
+    description: Eat Food
+    isComplete: 0
+  - id: GET_WATER
+    title: Objective
+    description: Get Water
+    isComplete: 0
+  - id: DRINK_WATER
+    title: Objective
+    description: Drink Water
+    isComplete: 0
+  - id: GET_MEDICINE
+    title: Objective
+    description: Get Medicine
+    isComplete: 0
+  - id: USE_MEDICINE
+    title: Objective
+    description: Use Medicine
+    isComplete: 0
+  - id: LEAVE_HOUSE
+    title: Objective
+    description: Leave the House
+    isComplete: 0
+  - id: WALK_TO_CAR
+    title: Objective
+    description: Walk to the Car
+    isComplete: 0
+  - id: FIND_CAR_PARTS
+    title: Objective
+    description: Find Car Parts
+    isComplete: 0
+  - id: REPAIR_CAR
+    title: Objective
+    description: Repair the Car
+    isComplete: 0
+  - id: SURVIVE
+    title: Objective
+    description: Survive
+    isComplete: 0
+  - id: REACH_AREA_4
+    title: Objective
+    description: Reach Area 4
+    isComplete: 0
+--- !u!4 &808640375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.17072, y: 5.9549155, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818706710
@@ -3369,6 +3472,7 @@ GameObject:
   - component: {fileID: 826250521}
   - component: {fileID: 826250523}
   - component: {fileID: 826250524}
+  - component: {fileID: 826250525}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3673,6 +3777,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.890131, y: 0.8116547}
   m_EdgeRadius: 0
+--- !u!114 &826250525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826250517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214e2f32cba092d408b3764cd8cf4b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactButton: {fileID: 308400214}
 --- !u!1 &829003162
 GameObject:
   m_ObjectHideFlags: 0
@@ -11345,6 +11462,7 @@ GameObject:
   - component: {fileID: 1033077189}
   - component: {fileID: 1033077191}
   - component: {fileID: 1033077190}
+  - component: {fileID: 1033077192}
   m_Layer: 5
   m_Name: Objecive UI Background
   m_TagString: Untagged
@@ -11411,6 +11529,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033077188}
   m_CullTransparentMesh: 1
+--- !u!114 &1033077192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033077188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4239bb672e81b584ca3ae73ecc40af0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelRoot: {fileID: 1033077188}
+  objectiveTitle: {fileID: 2125779661}
+  objectiveText: {fileID: 1853235379}
 --- !u!1 &1071001396
 GameObject:
   m_ObjectHideFlags: 0
@@ -11559,6 +11692,7 @@ GameObject:
   - component: {fileID: 1177183059}
   - component: {fileID: 1177183061}
   - component: {fileID: 1177183060}
+  - component: {fileID: 1177183062}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -11625,6 +11759,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177183058}
   m_CullTransparentMesh: 1
+--- !u!114 &1177183062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177183058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c257ddf6736b4eab8286e78693e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1177183058}
+  dialogueText: {fileID: 1771706624}
+  typingSpeed: 0.03
 --- !u!1 &1223493317
 GameObject:
   m_ObjectHideFlags: 0
@@ -12047,6 +12196,8 @@ GameObject:
   - component: {fileID: 1455644450}
   - component: {fileID: 1455644449}
   - component: {fileID: 1455644451}
+  - component: {fileID: 1455644453}
+  - component: {fileID: 1455644452}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -12170,6 +12321,44 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.08, y: 8.375601}
   m_EdgeRadius: 0
+--- !u!114 &1455644452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455644448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735dafefa508ea8448f8f1fcda3f411d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableSource: {fileID: 1455644453}
+--- !u!114 &1455644453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455644448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2b4a9c5b4a9c04099753d57497c9d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  broadcastLines:
+  - Emergency broadcast. Three days ago, the Area 1 Nuclear Power Plant exploded,
+    releasing radioactive contamination across Areas 1, 2, and 3.
+  - Many exposed survivors have become infected and hostile.
+  - If you're hearing this, you are still alive. Stay indoors whenever possible.
+    Radiation exposure outside will gradually damage your health.
+  - Scavenge for food to satisfy hunger, water to prevent dehydration, and medicine
+    to slow the effects of radiation sickness.
+  - If you find a working vehicle, use it. Faster travel means less exposure.
+  - Area 4 remains safe. Emergency containment barriers prevented the contamination
+    from reaching the region, and a treatment is available there.
+  - We cannot send help. Your only chance of survival is to reach Area 4.
+  - Good luck, survivor.
 --- !u!1 &1460821918
 GameObject:
   m_ObjectHideFlags: 0
@@ -12453,6 +12642,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1492061707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492061708}
+  - component: {fileID: 1492061711}
+  - component: {fileID: 1492061710}
+  - component: {fileID: 1492061709}
+  m_Layer: 5
+  m_Name: ClickEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1492061708
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492061707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 694270385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1492061709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492061707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1177183062}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: OnScreenClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1492061710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492061707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1492061711
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492061707}
+  m_CullTransparentMesh: 1
 --- !u!1 &1623188402
 GameObject:
   m_ObjectHideFlags: 0
@@ -17266,3 +17560,4 @@ SceneRoots:
   - {fileID: 1481494900}
   - {fileID: 683386007}
   - {fileID: 701750764}
+  - {fileID: 808640375}
