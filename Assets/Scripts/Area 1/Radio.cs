@@ -21,12 +21,12 @@ public class Radio : MonoBehaviour, IInteractable
         "Good luck, survivor."
     };
 
+    [SerializeField]
+    private GameObject foodToEnable;
+
     // Radio can always be re-listened to (CanInteract = true forever).
     // The thing that does NOT repeat is the OBJECTIVE STEP, handled below.
     public bool CanInteract() => true;
-
-    [SerializeField]
-    private GameObject foodToEnable;
 
     public void Interact()
     {
@@ -35,10 +35,17 @@ public class Radio : MonoBehaviour, IInteractable
 
     private void OnBroadcastFinished()
     {
-        // Safe to call every single time the player listens to the radio.
-        // First time: marks it complete and advances the objective list.
-        // Every time after: ObjectiveManager sees it's already complete and does nothing.
+        // Check BEFORE completing the step, so we know if this is the
+        // first time. After the first time, the food has already been
+        // revealed (and possibly eaten/destroyed by now), so we must not
+        // touch foodToEnable again on replays.
+        bool isFirstTime = !ObjectiveManager.Instance.IsStepComplete("LISTEN_TO_RADIO");
+
         ObjectiveManager.Instance.TryCompleteStep("LISTEN_TO_RADIO");
-        foodToEnable.SetActive(true);
+
+        if (isFirstTime && foodToEnable != null)
+        {
+            foodToEnable.SetActive(true);
+        }
     }
 }

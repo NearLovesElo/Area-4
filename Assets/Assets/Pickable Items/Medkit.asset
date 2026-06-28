@@ -17,3 +17,5 @@ MonoBehaviour:
   icon: {fileID: 7423195664468465203, guid: 2da0fe933cb823647915f0afd915f610, type: 3}
   description: Heals you by 100% when used
   maxStackSize: 1000
+  itemType: 3
+  restoreAmount: 100

@@ -17,3 +17,5 @@ MonoBehaviour:
   icon: {fileID: -2366775601286990869, guid: 4fc8d8ad517ea0d47bf41eee837df221, type: 3}
   description: Eases your hunger by 100% when eaten
   maxStackSize: 1000
+  itemType: 1
+  restoreAmount: 100

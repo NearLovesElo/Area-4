@@ -17,3 +17,5 @@ MonoBehaviour:
   icon: {fileID: 6049605792901559095, guid: 345b751750d320e47bcd39016e31423e, type: 3}
   description: Eases your thirst by 100% when drinked
   maxStackSize: 1000
+  itemType: 2
+  restoreAmount: 100
