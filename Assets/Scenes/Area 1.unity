@@ -440,7 +440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &86077012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2875,7 +2875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &352942797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3304,13 +3304,14 @@ GameObject:
   - component: {fileID: 624430229}
   - component: {fileID: 624430233}
   - component: {fileID: 624430232}
+  - component: {fileID: 624430234}
   m_Layer: 0
   m_Name: CannedFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &624430229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3454,6 +3455,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableSource: {fileID: 624430232}
+--- !u!114 &624430234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624430228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c5b985ab41b0f43be5248516c9cace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683386005
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3645,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1492061708}
   - {fileID: 1177183059}
   - {fileID: 1254852708}
   - {fileID: 308400211}
@@ -3640,6 +3652,7 @@ RectTransform:
   - {fileID: 1071001397}
   - {fileID: 19122856}
   - {fileID: 1851652769}
+  - {fileID: 1492061708}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3789,6 +3802,9 @@ MonoBehaviour:
   - Ugh... my head hurts.
   - The last thing I remember was a huge explosion... then a shockwave hit me.
   - ...What happened?
+  - (Static Radio Noises)
+  - I should listen to the radio
+  objectiveUI: {fileID: 1033077188}
 --- !u!114 &808640374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12364,7 +12380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1033077189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12667,6 +12683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1177183058}
+  clickPanel: {fileID: 1492061707}
   dialogueText: {fileID: 1771706624}
   typingSpeed: 0.03
 --- !u!1 &1223493317
@@ -13354,6 +13371,7 @@ MonoBehaviour:
     from reaching the region, and a treatment is available there.
   - We cannot send help. Your only chance of survival is to reach Area 4.
   - Good luck, survivor.
+  foodToEnable: {fileID: 624430228}
 --- !u!1 &1460821918
 GameObject:
   m_ObjectHideFlags: 0
@@ -18161,7 +18179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1851652769
 RectTransform:
   m_ObjectHideFlags: 0

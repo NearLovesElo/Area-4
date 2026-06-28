@@ -14,11 +14,21 @@ public class IntroSequence : MonoBehaviour
     {
         "Ugh... my head hurts.",
         "The last thing I remember was a huge explosion... then a shockwave hit me.",
-        "...What happened?"
+        "...What happened?",
+        "(Static Radio Noises)",
+        "I should listen to the radio"
     };
+
+    [SerializeField]
+    private GameObject objectiveUI;
 
     private void Start()
     {
-        DialogueManager.Instance.PlayLines(wakeUpLines);
+        DialogueManager.Instance.PlayLines(wakeUpLines, OnIntroDialogueFinished);
+    }
+
+    private void OnIntroDialogueFinished()
+    {
+            objectiveUI.SetActive(true);
     }
 }

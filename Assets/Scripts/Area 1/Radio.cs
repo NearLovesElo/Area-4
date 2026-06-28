@@ -25,6 +25,9 @@ public class Radio : MonoBehaviour, IInteractable
     // The thing that does NOT repeat is the OBJECTIVE STEP, handled below.
     public bool CanInteract() => true;
 
+    [SerializeField]
+    private GameObject foodToEnable;
+
     public void Interact()
     {
         DialogueManager.Instance.PlayLines(broadcastLines, onFinished: OnBroadcastFinished);
@@ -36,5 +39,6 @@ public class Radio : MonoBehaviour, IInteractable
         // First time: marks it complete and advances the objective list.
         // Every time after: ObjectiveManager sees it's already complete and does nothing.
         ObjectiveManager.Instance.TryCompleteStep("LISTEN_TO_RADIO");
+        foodToEnable.SetActive(true);
     }
 }
