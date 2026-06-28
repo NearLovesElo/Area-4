@@ -4190,6 +4190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   watchedType: 3
+  doorToOutsideCollider: {fileID: 843016028}
 --- !u!114 &808640378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5036,6 +5037,12 @@ MonoBehaviour:
   health: 50
   hunger: 50
   thirst: 50
+  healthDecayAmount: 0.5
+  healthDecayInterval: 1
+  hungerDecayAmount: 0.5
+  hungerDecayInterval: 2
+  thirstDecayAmount: 0.5
+  thirstDecayInterval: 1
 --- !u!1 &829003162
 GameObject:
   m_ObjectHideFlags: 0
@@ -12588,7 +12595,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -12925,7 +12932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1033077189
 RectTransform:
   m_ObjectHideFlags: 0
