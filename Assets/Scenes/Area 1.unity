@@ -434,6 +434,7 @@ GameObject:
   - component: {fileID: 86077014}
   - component: {fileID: 86077013}
   - component: {fileID: 86077012}
+  - component: {fileID: 86077017}
   m_Layer: 0
   m_Name: Medkit
   m_TagString: Untagged
@@ -584,6 +585,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86077017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86077011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cdfdfd3bb582d40ad7983c144f12b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &88671310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,6 +2971,7 @@ GameObject:
   - component: {fileID: 352942799}
   - component: {fileID: 352942798}
   - component: {fileID: 352942797}
+  - component: {fileID: 352942802}
   m_Layer: 0
   m_Name: BottledWater
   m_TagString: Untagged
@@ -3108,6 +3122,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &352942802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352942796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f225dd34477634a96fe672d3c0442d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &433002916
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,6 +4054,9 @@ GameObject:
   - component: {fileID: 808640375}
   - component: {fileID: 808640374}
   - component: {fileID: 808640373}
+  - component: {fileID: 808640376}
+  - component: {fileID: 808640378}
+  - component: {fileID: 808640377}
   m_Layer: 0
   m_Name: ObjectiveManager
   m_TagString: Untagged
@@ -4134,6 +4163,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808640376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f202ea19d96bd47b14d8f4acf75ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchedType: 1
+  waterToEnable: {fileID: 352942796}
+--- !u!114 &808640377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae15f923362270d40b92cf4b9e304d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchedType: 3
+--- !u!114 &808640378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808640372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df3bc60fa497ca438b7b62e9d040a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  watchedType: 2
+  medicineToEnable: {fileID: 86077011}
 --- !u!1 &818706710
 GameObject:
   m_ObjectHideFlags: 0

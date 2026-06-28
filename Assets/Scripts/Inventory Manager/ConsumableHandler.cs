@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// Single place that knows how to apply a consumable's effect and remove it
 /// from inventory. Static because it's a stateless operation - call it from
@@ -6,6 +8,14 @@
 /// </summary>
 public static class ConsumableUseHandler
 {
+    /// <summary>
+    /// Fired after ANY item is successfully used/eaten/drunk, with the item
+    /// that was consumed. Lets one-off systems (tutorial triggers, stats,
+    /// achievements) react without ConsumableUseHandler needing to know
+    /// they exist.
+    /// </summary>
+    public static event Action<ItemData> OnItemUsed;
+
     public static void Use(ItemData item)
     {
         if (item == null || item.itemType == ItemType.None) return;
@@ -24,5 +34,7 @@ public static class ConsumableUseHandler
         }
 
         InventoryManager.Instance.RemoveItem(item, 1);
+
+        OnItemUsed?.Invoke(item);
     }
 }
