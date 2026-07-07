@@ -6,15 +6,23 @@ Area 4 is a survival game set in a post-disaster world where a radiation facilit
 Originally developed as a Game Programming 2 school project and currently being redeveloped with improved systems and mechanics.
 
 # Features
-• Top-down survival gameplay
-• Inventory system
+• Top-down survival gameplay ✅
+
+• Inventory system ✅
+
 • Item crafting system
-• Hunger and thirst mechanics
-• Day and night cycle
+
+• Hunger and thirst mechanics ✅
+
+• Day and night cycle ✅
+
 • Zombie AI with increasing difficulty
+
 • Multi-area exploration
+
 • Save/progression system
-• Resource scavenging
+
+• Resource scavenging ✅
 
 # Tech Stack
 • Unity
