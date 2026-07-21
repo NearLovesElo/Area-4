@@ -43,8 +43,7 @@ public class ObjectiveManager : MonoBehaviour
         new Step { id = "WALK_TO_CAR",     title = "Objective", description = "Walk to the Car" },
         new Step { id = "FIND_CAR_PARTS",  title = "Objective", description = "Find Car Parts" },
         new Step { id = "REPAIR_CAR",      title = "Objective", description = "Repair the Car" },
-        new Step { id = "SURVIVE",         title = "Objective", description = "Survive" },
-        new Step { id = "REACH_AREA_4",    title = "Objective", description = "Reach Area 4" },
+        new Step { id = "REACH_AREA_4",    title = "Objective", description = "Survive & Reach Area 4" },
     };
 
     private readonly Dictionary<string, Step> _lookup = new Dictionary<string, Step>();
